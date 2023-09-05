@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: talys_app
+  name: talys_app_deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: talys_app
+  template:
+    metadata:
+      labels:
+        app: talys_app
+    spec:
+      containers:
+      - image: leonelfeukouo/talys_app:v_5
+        name: talys_app_container
+        ports:
+        - containerPort: 8080
