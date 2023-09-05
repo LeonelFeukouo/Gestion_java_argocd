@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: talys_app
+  name: talys-app
   namespace: argocd
 spec:
   project: default
@@ -12,7 +12,7 @@ spec:
     path: dev
   destination: 
     server: https://kubernetes.default.svc
-    namespace: talys_app
+    namespace: talys-app
 
   syncPolicy:
     syncOptions:
