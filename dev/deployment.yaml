@@ -15,7 +15,7 @@ spec:
         app: talys-app
     spec:
       containers:
-      - image: leonelfeukouo/talys_app:v_3
+      - image: leonelfeukouo/talys_app:v_4
         name: talys-app-container
         ports:
         - containerPort: 8080
